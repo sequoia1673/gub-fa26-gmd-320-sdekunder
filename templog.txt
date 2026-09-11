@@ -1,0 +1,5 @@
+changing background color (temp)
+working on tether point movement (to the edge of screen / playspace)
+adding walls
+adding wall script and collision detection (in progress)
+adding "templog" text doc

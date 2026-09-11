@@ -19,7 +19,7 @@ public class PlayerMovementScript : MonoBehaviour
         for (int i = 0; i < GRAPLLE_POINT_NUM; i++)
         {
             GrapplePoints[i] = Instantiate(Resources.Load<GameObject>("GrapplePoint"), Vector2.zero, Quaternion.identity);
-            GrapplePoints[i].GetComponent<GrapplePointScript>().mousePosition = new Vector2(i, i);
+            GrapplePoints[i].GetComponent<GrapplePointScript>().targetPosition = new Vector2(i, i);
         }
         
     }
@@ -64,8 +64,9 @@ public class PlayerMovementScript : MonoBehaviour
             mousePositionOnClick = Camera.main.ScreenToWorldPoint(Input.mousePosition); //https://discussions.unity.com/t/2d-mouse-point-click-movement-system-quick-tutorial/523253
 
 
-            GrapplePoints[grapplePointToFireNext].GetComponent<GrapplePointScript>().mousePosition = mousePositionOnClick;
+            GrapplePoints[grapplePointToFireNext].GetComponent<GrapplePointScript>().targetPosition = mousePositionOnClick;
             GrapplePoints[grapplePointToFireNext].GetComponent<GrapplePointScript>().SetPos(xpos, ypos);
+            GrapplePoints[grapplePointToFireNext].GetComponent<GrapplePointScript>().collided = false;
             grapplePointToFireNext++;
             if(grapplePointToFireNext >= GRAPLLE_POINT_NUM)
             {
@@ -79,8 +80,9 @@ public class PlayerMovementScript : MonoBehaviour
 
             for (int i = 0; i < GRAPLLE_POINT_NUM; i++)
             {
-                GrapplePoints[i].GetComponent<GrapplePointScript>().mousePosition = mousePositionOnClick;
+                GrapplePoints[i].GetComponent<GrapplePointScript>().targetPosition = mousePositionOnClick;
                 GrapplePoints[i].GetComponent<GrapplePointScript>().SetPos(xpos, ypos);
+                GrapplePoints[grapplePointToFireNext].GetComponent<GrapplePointScript>().collided = false;
             }
         }
     }

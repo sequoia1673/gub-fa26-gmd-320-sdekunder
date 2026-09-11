@@ -5,8 +5,10 @@ public class GrapplePointScript : MonoBehaviour
     public float xpos;
     public float ypos;
 
-    public Vector2 mousePosition;
-    public Vector2 movementDirection;
+    public Vector2 targetPosition;
+    public Vector2 targetPositionDistance;
+
+    public bool collided = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,8 +23,8 @@ public class GrapplePointScript : MonoBehaviour
         ypos = transform.position.y;
 
 
-        movementDirection.x = mousePosition.x - xpos;
-        movementDirection.y = mousePosition.y - ypos;
+        targetPositionDistance.x = targetPosition.x - xpos;
+        targetPositionDistance.y = targetPosition.y - ypos;
 
 
         //if (moving)
@@ -30,8 +32,16 @@ public class GrapplePointScript : MonoBehaviour
         //    transform.position = Vector3.MoveTowards(transform.position, mousePosition * 10, Time.deltaTime * 50);
         //}
 
-        transform.position = Vector3.MoveTowards(transform.position, mousePosition, Time.deltaTime * 50);
+        if(!collided)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, Time.deltaTime * 50);
+        }
 
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("hit!");
     }
 
     public void SetPos(float x, float y)
