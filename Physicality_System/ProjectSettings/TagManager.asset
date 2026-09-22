@@ -39,14 +39,20 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: lines
-    uniqueID: 3431518023
+  - name: hitbox
+    uniqueID: 848758705
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: lines
+    uniqueID: 3431518023
+    locked: 0
   - name: grapple points
     uniqueID: 4061566683
+    locked: 0
+  - name: bullets
+    uniqueID: 3452764121
     locked: 0
   - name: player
     uniqueID: 1604849819

@@ -4,10 +4,12 @@
 - setup computer (preferred arrangement)
 - setup/connect repo
 - put todo in the repo (+add, +commit)
-open project
+- open project
 - start work music
 
-create bullets
+> create bullets?
+> create hit zones
+make them spawn regualrly
 have them reset the player upon getting hit
 have them spawn randomly
 

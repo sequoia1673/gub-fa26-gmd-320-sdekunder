@@ -9,7 +9,7 @@ public class PlayerMovementScript : MonoBehaviour
     public int grapplePointToFireNext = 0;
 
     public GameObject[] GrapplePoints;
-    const int GRAPLLE_POINT_NUM = 4;
+    const int GRAPLLE_POINT_NUM = 3;
 
     const float PLAYER_SPEED = 25;
     const float PROJECTILE_SPREAD = 2;
@@ -102,17 +102,6 @@ public class PlayerMovementScript : MonoBehaviour
             FireGrapplePoint(projectile1, projectile1Target);
             FireGrapplePoint(projectile2, projectile2Target);
             FireGrapplePoint(projectile3, projectile3Target);
-            
-
-
-
-
-            //for (int i = 0; i < GRAPLLE_POINT_NUM; i++)
-            //{
-            //    GrapplePoints[i].GetComponent<GrapplePointScript>().SetPos(xpos, ypos);
-            //    GrapplePoints[i].GetComponent<GrapplePointScript>().FireGrapplePoint(mousePositionOnClick);
-
-            //}
         }
     }
 
@@ -126,7 +115,7 @@ public class PlayerMovementScript : MonoBehaviour
             grapplePointToFireNext = 0;
         }
 
-        GrapplePoints[grapplePointToFireNext].GetComponent<SpriteRenderer>().color = Color.darkCyan; //active color
+        GrapplePoints[grapplePointToFireNext].GetComponent<SpriteRenderer>().color = Color.darkRed; //active color
     }
 
     void FireGrapplePoint(Vector2 tarPos)
