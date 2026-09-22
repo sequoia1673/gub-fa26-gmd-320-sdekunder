@@ -1,7 +1,0 @@
-finishing grapplepoint / wall collsions! they work now !!!
-adding screen boarder walls
-working on right click "scattershot" gamefeel
-finished "scattershot"!
-adding lines (rendered by grapplepoints)
-messing with line color and shape
-finalizing line color and shape
