@@ -1,0 +1,18 @@
+- get to lab
+- find computer
+- create todo
+- setup computer (preferred arrangement)
+- setup/connect repo
+put todo in the repo (+add, +commit)
+open project
+start work music
+
+create bullets
+have them reset the player upon getting hit
+have them spawn randomly
+
+explain game instructions
+
+add, commit, push
+stop work music
+go home
