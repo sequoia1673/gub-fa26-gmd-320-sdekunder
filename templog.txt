@@ -1,0 +1,10 @@
+adding GridManager
+starting GridManagerScript
+adding GridCell
+starting GridCellScript
+adding Prefabs > Resources folder
+adding Scripts folder
+creating GridCell prefab
+
+changing background color :)
+GridManager can create grid (at specified starting position, grid height, grid width, grid spacing)
